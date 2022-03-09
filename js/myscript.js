@@ -39,6 +39,7 @@ for (let i = 0; i < team.length; i++){
     }
 }
 
+// il for in non serve perchè qui la proprietà la prendo singolarmente 
 for (let i = 0; i < team.length; i++){
     document.getElementById("my-img-container").innerHTML +=` 
     <div class="my-card">

@@ -31,8 +31,27 @@ const team = [
     },
 ];
 
+
 for (let i = 0; i < team.length; i++){
+    console.log("-------");
     for (const key in team[i]) {
         console.log(team[i][key]);
     }
 }
+
+for (let i = 0; i < team.length; i++){
+    console.log("-------");
+    for (const key in team[i]) {
+        
+        document.getElementById("my-img-container").innerHTML +=` 
+        <div class="my-card">
+            <img src=img/${team[i].image}  alt="img member">
+            <p>${team[i].name}</p>
+            <p>${team[i].role}</p>
+        </div>
+        `;
+    
+        
+    }
+}
+

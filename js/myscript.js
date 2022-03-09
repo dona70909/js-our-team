@@ -40,18 +40,12 @@ for (let i = 0; i < team.length; i++){
 }
 
 for (let i = 0; i < team.length; i++){
-    console.log("-------");
-    for (const key in team[i]) {
-        
-        document.getElementById("my-img-container").innerHTML +=` 
-        <div class="my-card">
-            <img src=img/${team[i].image}  alt="img member">
-            <p>${team[i].name}</p>
-            <p>${team[i].role}</p>
-        </div>
-        `;
-    
-        
-    }
+    document.getElementById("my-img-container").innerHTML +=` 
+    <div class="my-card">
+        <img src=img/${team[i].image}  alt="img member">
+        <p>${team[i].name}</p>
+        <p>${team[i].role}</p>
+    </div>
+    `;
 }
 

@@ -1,3 +1,21 @@
+body{
+    font-family: sans-serif;
+}
+
+
+#my-img-container > .my-card > img{
+    margin-bottom: .5rem;
+}
+
+.my-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.my-role{
+    text-align: center;
+}
 
 #my-img-container{
     gap: 1rem;

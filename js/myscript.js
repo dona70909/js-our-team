@@ -44,8 +44,8 @@ for (let i = 0; i < team.length; i++){
     document.getElementById("my-img-container").innerHTML +=` 
     <div class="my-card">
         <img src=img/${team[i].image}  alt="img member">
-        <p>${team[i].name}</p>
-        <p>${team[i].role}</p>
+        <p class="my-name">${team[i].name}</p>
+        <p class="my-role">${team[i].role}</p>
     </div>
     `;
 }

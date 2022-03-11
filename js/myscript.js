@@ -32,16 +32,17 @@ const team = [
 ];
 
 const parent = document.getElementById("my-img-container");
+document.getElementById("my-form").reset();
 
 // il for in non serve perchè qui la proprietà la prendo singolarmente 
 for (let i = 0; i < team.length; i++){
     parent.innerHTML +=` 
     <div class="card my-card">
-    <img class="card-img-top" src=img/${team[i].image}  alt="img member">
-    <div class="card-body">
-    <h5 class="card-title">${team[i].name}</h5>
-    <p class="card-text">${team[i].role}</p>
-    </div>
+        <img class="card-img-top" src=img/${team[i].image}  alt="img member">
+        <div class="card-body">
+            <h5 class="card-title">${team[i].name}</h5>
+            <p class="card-text">${team[i].role}</p>
+        </div>
     </div>
     `;
 }
@@ -61,6 +62,7 @@ function createMember(username,role,image){
 const btnSubmit = document.getElementById("submit");
 btnSubmit.addEventListener("click", function(){
     
+    document.getElementById("my-form").reset();
     const nameNewMember = document.getElementById("user-name").value;
     const roleNewMember = document.getElementById("user-role").value;
     const imageNewMember = document.getElementById("user-url-image").value;
@@ -69,12 +71,14 @@ btnSubmit.addEventListener("click", function(){
     
     parent.innerHTML += ` 
     <div class="card my-card">
-    <img class="card-img-top" src=${imageNewMember}  alt="img member">
+        <img class="card-img-top" src=${imageNewMember}  alt="img member">
     <div class="card-body">
-    <h5 class="card-title">${nameNewMember}</h5>
-    <p class="card-text">${roleNewMember}</p>
+        <h5 class="card-title">${nameNewMember}</h5>
+        <p class="card-text">${roleNewMember}</p>
     </div>
     </div>
     `;
-    
+
 });
+
+

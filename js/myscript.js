@@ -62,22 +62,27 @@ function createMember(username,role,image){
 const btnSubmit = document.getElementById("submit");
 btnSubmit.addEventListener("click", function(){
     
-    document.getElementById("my-form").reset();
+    //document.getElementById("my-form").reset();
     const nameNewMember = document.getElementById("user-name").value;
     const roleNewMember = document.getElementById("user-role").value;
     const imageNewMember = document.getElementById("user-url-image").value;
     const newTeamMember = createMember(nameNewMember,roleNewMember,imageNewMember);
+
     team.push(newTeamMember);
-    
-    parent.innerHTML += ` 
-    <div class="card my-card">
-        <img class="card-img-top" src=${imageNewMember}  alt="img member">
-    <div class="card-body">
-        <h5 class="card-title">${nameNewMember}</h5>
-        <p class="card-text">${roleNewMember}</p>
-    </div>
-    </div>
-    `;
+
+    console.log(nameNewMember);
+
+    if( nameNewMember != '' && roleNewMember != '' && imageNewMember != ''){
+        parent.innerHTML += ` 
+        <div class="card my-card">
+            <img class="card-img-top" src=${imageNewMember}  alt="img member">
+        <div class="card-body">
+            <h5 class="card-title">${nameNewMember}</h5>
+            <p class="card-text">${roleNewMember}</p>
+        </div>
+        </div>
+        `;
+    }
 
 });
 

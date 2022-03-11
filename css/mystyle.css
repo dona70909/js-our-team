@@ -9,8 +9,10 @@ header{
 }
 
 #my-img-container > .my-card{
-    width: calc((100% / 3) - 1rem);
+    width: calc((80% / 3) - 1rem);
     text-align:center;
+    padding: 1.2rem;
+    border-radius: 10px;
 }
 
 #my-img-container > .my-card > img{
